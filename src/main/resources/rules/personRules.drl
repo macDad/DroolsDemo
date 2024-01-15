@@ -1,0 +1,23 @@
+package com.mad.drools.rules
+
+import com.mad.drools.model.Person
+
+// Rule 1: Check if a person is eligible for a discount based on age
+rule "Discount Rule"
+when
+    $person: Person(age < 30)
+then
+    $person.setDiscount("20%");
+    $person.setSenior(false);
+    System.out.println($person.getName() + " is eligible for a discount!");
+end
+
+// Rule 2: Check if a person is considered a senior
+rule "Senior Rule"
+when
+    $person: Person(age >= 60)
+then
+    $person.setDiscount("50%");
+    $person.setSenior(true);
+    System.out.println($person.getName() + " is a senior citizen.");
+end
