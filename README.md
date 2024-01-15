@@ -1,6 +1,8 @@
 # Drools Demo with Spring Boot
 
-This is a simple Spring Boot application that demonstrates the usage of Drools rules engine. The application includes a REST API endpoint that takes the age as input, applies Drools rules to determine eligibility for a discount and senior citizenship, and returns a response.
+This is a simple Spring Boot application that demonstrates the usage of Drools rules engine. The application includes a
+REST API endpoint that takes the age as input, applies Drools rules to determine eligibility for a discount and senior
+citizenship, and returns a response.
 
 ## Prerequisites
 
@@ -53,11 +55,15 @@ curl -X GET http://localhost:8080/api/checkDiscount/Simon/25
 ```
 
 ## Rules
-The Drools rules are defined in the src/main/resources/rules/personRules.drl file. The rules check the age of a person and print messages based on the conditions.
+
+The Drools rules are defined in the src/main/resources/rules/personRules.drl file. The rules check the age of a person
+and print messages based on the conditions.
 
 ## License
+
 This project is licensed under the Apache License 2.0 - see the LICENSE file for details.
 
 ## Acknowledgments
+
 * [Drools Documentation](https://www.drools.org/learn/documentation.html)
 * [Spring Boot Documentation](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/)

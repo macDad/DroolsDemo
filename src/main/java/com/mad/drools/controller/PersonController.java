@@ -2,7 +2,6 @@ package com.mad.drools.controller;
 
 import com.mad.drools.model.Person;
 import com.mad.drools.service.DroolsService;
-import org.kie.api.runtime.KieSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

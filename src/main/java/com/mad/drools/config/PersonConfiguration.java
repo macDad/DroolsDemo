@@ -11,17 +11,17 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class PersonConfiguration {
-    private static final KieServices kieServices = KieServices.Factory.get();
-    private static final String RULES_CUSTOMER_RULES_DRL = "rules/personRules.drl";
+  private static final KieServices kieServices = KieServices.Factory.get();
+  private static final String RULES_CUSTOMER_RULES_DRL = "rules/personRules.drl";
 
-    @Bean
-    public KieContainer kieContainer() {
-        KieFileSystem kieFileSystem = kieServices.newKieFileSystem();
-        kieFileSystem.write(ResourceFactory.newClassPathResource(RULES_CUSTOMER_RULES_DRL));
-        KieBuilder kb = kieServices.newKieBuilder(kieFileSystem);
-        kb.buildAll();
-        KieModule kieModule = kb.getKieModule();
-        KieContainer kieContainer = kieServices.newKieContainer(kieModule.getReleaseId());
-        return kieContainer;
-    }
+  @Bean
+  public KieContainer kieContainer() {
+    KieFileSystem kieFileSystem = kieServices.newKieFileSystem();
+    kieFileSystem.write(ResourceFactory.newClassPathResource(RULES_CUSTOMER_RULES_DRL));
+    KieBuilder kb = kieServices.newKieBuilder(kieFileSystem);
+    kb.buildAll();
+    KieModule kieModule = kb.getKieModule();
+    KieContainer kieContainer = kieServices.newKieContainer(kieModule.getReleaseId());
+    return kieContainer;
+  }
 }
