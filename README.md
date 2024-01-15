@@ -40,15 +40,16 @@ The application will start, and you can access the REST API endpoint at http://l
 
 ### Check Discount
 
-- **Endpoint:** `/api/checkDiscount/{age}`
+- **Endpoint:** `/api/checkDiscount/{name}/{age}`
 - **Method:** GET
 - **Path Variable:**
+    - `name` (string): Name of the person
     - `age` (integer): Age of the person
 
 #### Example
 
 ```bash
-curl -X GET http://localhost:8080/api/checkDiscount/25
+curl -X GET http://localhost:8080/api/checkDiscount/Simon/25
 ```
 
 ## Rules
@@ -58,5 +59,5 @@ The Drools rules are defined in the src/main/resources/rules/personRules.drl fil
 This project is licensed under the Apache License 2.0 - see the LICENSE file for details.
 
 ## Acknowledgments
-* Drools Documentation
-* Spring Boot Documentation
+* [Drools Documentation](https://www.drools.org/learn/documentation.html)
+* [Spring Boot Documentation](https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/)
